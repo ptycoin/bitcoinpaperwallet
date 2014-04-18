@@ -10479,26 +10479,13 @@ Bitcoin.Util = {
 
 						</div>
                         <p style="margin-top: 0;"><strong>Change your wallet design, language, or cryptocurrency?</strong>
-    					<select id="designPicker" onChange="setDesign(this.value, false);" style="font-size: 12px;">
-                  		  <option value="default">--- Bitcoin Wallet Designs ---</option>
+    			<select id="designPicker" onChange="setDesign(this.value, false);" style="font-size: 12px;">
+                  	  <option value="default">--- Bitcoin Wallet Designs ---</option>
                           <option value="default">Standard Bitcoin Design (English)</option>
-                          <option value="holiday">Holiday / Christmas Design (English)</option>
-                          <option value="chinese-new-year">Chinese New Year (Simplified Chinese)</option>
-                          <option value="traditional-chinese-new-year">Chinese New Year (Traditional Chinese)</option>
-                          <option value="chinese">Standard (Simplified Chinese)</option>
-                          <option value="traditional-chinese">Standard (Traditional Chinese/zh-tw)</option>
-                          <option value="czech">Standard (Czech)</option>
-                          <option value="dutch">Standard (Dutch)</option>
-                          <option value="french">Standard (French)</option>
-                          <option value="german">Standard (German)</option>
-                          <option value="italian">Standard (Italian)</option>
-                          <option value="portuguese">Standard (Portuguese)</option>
-                          <option value="russian">Standard (Russian)</option>
-                  		  <option value="spanish">Standard (Spanish)</option>
-                  		  <option value="default">--- Other Cryptocurrencies ---</option>
-                  		  <option value="alt-litecoin">Litecoin</option>
-                  		  <option value="alt-dogecoin">Dogecoin</option>
-                  		  <option value="alt-testnet">"Testnet"</option>
+                  	  <option value="spanish">Standard Bitcoin Design (Spanish)</option>
+                  	  <option value="default">--- Other Cryptocurrencies ---</option>
+                  	  <option value="alt-litecoin">Litecoin</option>
+                  	  <option value="alt-dogecoin">Dogecoin</option>
                         </select>
                         </p>
                         <b>Step 1: Calibrate Printer</b><br />
@@ -12882,7 +12869,7 @@ ninja.publicKey = {
 	}
 
 function setDesign (whichDesign, isOnLoad) {
-	if (!whichDesign) whichDesign = 'default';	
+	if (!whichDesign) whichDesign = 'spanish';	
 	// if we used the dropdown menu to select an alt-coin, we need to reload the page altogether.
 	if (!isOnLoad && whichDesign.substring(0,4) == 'alt-') window.location='?design=' + whichDesign;
 	// if we're already using an altcoin, reload the page no matter which design we choose.
